@@ -1,19 +1,19 @@
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [message, setMessage] = useState('');
 
   const handleClick = () => {
-    setMessage('Hellooo world ');
+    setMessage('Hellooo');
   };
 
   return (
-    <div className="container mt-5 text-center">
-      <button className="btn btn-primary mx-auto d-block" onClick={handleClick}>
+    <div className="d-flex justify-content-center align-items-center vh-100 flex-column">
+      <button className="btn btn-primary mb-3" onClick={handleClick}>
         Click Me
       </button>
-
-      {message && <h2 className="mt-3 text-success">{message}</h2>}
+      {message && <h2 className="text-success">{message}</h2>}
     </div>
   );
 }
